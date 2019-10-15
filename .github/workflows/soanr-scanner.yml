@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  pull_request:
+    branches: 
+      - develop
+  push:
+      branches: 
+        - develop  
+
+jobs:
+   
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v1
+    - name: sonar-scanner
+      run: docker run -ti -v $(pwd):/usr/src --link sonarqube newtmitch/sonar-scanner sonar-runner -Dsonar.host.url=https://sonar.openbsl.ru
