@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: sonar-scanner
-      run: docker run -e SONAR_HOST_URL=https://sonar.openbsl.ru -v "/home/runner/work/vanessa-automation/vanessa-automation:/usr/src" sonarsource/sonar-scanner-cli
+      run: docker run -e SONAR_PROJECT_BASE_DIR=home/runner/work SONAR_HOST_URL=https://sonar.openbsl.ru -v "/home/runner/work/vanessa-automation/vanessa-automation:/usr/src" sonarsource/sonar-scanner-cli
