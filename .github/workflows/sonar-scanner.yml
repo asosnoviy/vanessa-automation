@@ -16,5 +16,13 @@ jobs:
  
     steps:
     - uses: actions/checkout@v1
-    - name: sonar-scanner
-      run: docker run -e SONAR_PROJECT_BASE_DIR=/home/runner/work/vanessa-automation/vanessa-automation -e SONAR_HOST_URL=https://sonar.openbsl.ru -e SONAR_USER_HOME=/home/runner/work/vanessa-automation/vanessa-automation/.sonar -v "/home/runner/work/vanessa-automation/vanessa-automation.sonar:/usr/.sonar" -v "/home/runner/work/vanessa-automation/vanessa-automation:/usr/src" sonarsource/sonar-scanner-cli 
+    - name: Setup sonarqube
+    - uses: warchant/setup-sonar-scanner@v1
+    - name: Run sonarqube
+    env: 
+      # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: sonar-scanner
+       -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+       -Dsonar.host.url=https://sonar.openbsl.ru/
+       -Dsonar.projectKey=VA
