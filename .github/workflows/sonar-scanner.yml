@@ -25,5 +25,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: sonar-scanner
        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-       -Dsonar.host.url=https://sonar.openbsl.ru/
+       -Dsonar.host.url=https://sonar.openbsl.ru
        -Dsonar.projectKey=VA
+       -Dsonar.branch.target=develop
+       -Dsonar.branch.name=test
+        
