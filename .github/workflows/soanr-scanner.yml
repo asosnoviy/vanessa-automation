@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: sonar-scanner
-      run: docker run -ti -v $(pwd):/usr/src --link sonarqube newtmitch/sonar-scanner sonar-runner -Dsonar.host.url=https://sonar.openbsl.ru
+      run: docker run -ti -v $(pwd):/usr/src --link sonarqube newtmitch/sonar-scanner sonar-scanner -Dsonar.host.url=https://sonar.openbsl.ru
