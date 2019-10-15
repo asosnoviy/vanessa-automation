@@ -15,13 +15,14 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-    - uses: actions/checkout@v1
+    - name: checkout
+      uses: actions/checkout@v1
     - name: Setup sonarqube
-    - uses: warchant/setup-sonar-scanner@v1
+      uses: warchant/setup-sonar-scanner@v1
     - name: Run sonarqube
-    env: 
+      env: 
       # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: sonar-scanner
        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
        -Dsonar.host.url=https://sonar.openbsl.ru/
