@@ -1,5 +1,4 @@
-name: Docker Image CI
-
+name: sonar-scanner
 on:
   pull_request:
     branches: 
@@ -27,6 +26,6 @@ jobs:
        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
        -Dsonar.host.url=https://sonar.openbsl.ru
        -Dsonar.projectKey=VA
-       -Dsonar.branch.target=develop
-       -Dsonar.branch.name=test
+       -Dsonar.branch.target=master
+       -Dsonar.branch.name=develop
         
