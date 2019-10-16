@@ -9,16 +9,18 @@ on:
 
 jobs:
    
-  build:
- 
+  SonarScanner:
+    
     runs-on: ubuntu-latest
- 
+   
     steps:
+    
     - name: checkout
       uses: actions/checkout@v1
     - name: Setup sonarqube
       uses: warchant/setup-sonar-scanner@v1
     - name: Run sonarqube
+      if: github.event_name == 'push' 
       env: 
       # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -26,6 +28,5 @@ jobs:
        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
        -Dsonar.host.url=https://sonar.openbsl.ru
        -Dsonar.projectKey=VA
-       -Dsonar.branch.target=master
        -Dsonar.branch.name=develop
         
