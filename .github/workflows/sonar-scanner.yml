@@ -39,7 +39,7 @@ jobs:
        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
        -Dsonar.host.url=https://sonar.openbsl.ru
        -Dsonar.projectKey=VA
-       -Dsonar.pullrequest.key=${GITHUB_ACTION}
+       -Dsonar.pullrequest.key=${GITHUB_REF}
        -Dsonar.pullrequest.branch=develop 
        -Dsonar.pullrequest.base=develop 
         
