@@ -10242,6 +10242,13 @@ E.g.:
 																</InputField>
 															</ChildItems>
 														</UsualGroup>
+														<CheckBoxField name="ВыполнятьЗамер" id="2240">
+															<DataPath>Объект.ВыполнятьЗамер</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ВыполнятьЗамерКонтекстноеМеню" id="2241"/>
+															<ExtendedTooltip name="ВыполнятьЗамерРасширеннаяПодсказка" id="2242"/>
+														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
 											</ChildItems>
