@@ -10208,11 +10208,11 @@ E.g.:
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Адрес отладчика, который будет передан клиенту тестирования.</v8:content>
+																				<v8:content>Адрес отладчика, который будет передан клиенту тестирования. Например: http://localhost:1560</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>Address of debugger to be passed to TestClient.</v8:content>
+																				<v8:content>Address of debugger to be passed to TestClient. Example: http://localhost:1560</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -10231,11 +10231,11 @@ E.g.:
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Ключи отладки, которые будут переданы клиенту тестирования при запуске.</v8:content>
+																				<v8:content>Ключи отладки, которые будут переданы клиенту тестирования при запуске. Например: -http -attach</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>Launch parameters to be passed to TestClient.</v8:content>
+																				<v8:content>Launch parameters to be passed to TestClient. Example: -http -attach</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
